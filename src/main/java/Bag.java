@@ -18,9 +18,6 @@ public abstract class Bag {
     private int capacity;
     private String[] contents;
 
-
-
-
     /*
      * TODO: Create a constructor that takes two arguments:
      *       - a String representing the Bag's colour
@@ -96,7 +93,7 @@ public abstract class Bag {
      *
      * If there are no items in this Bag, return null.
      *
-     * @return
+     * @return item
      */
     public String popItem(){
         if (contents.length == 0){
@@ -123,7 +120,7 @@ public abstract class Bag {
      * This method requires you to have created the private
      * instance variables mentioned above.
      *
-     * @return
+     * @return details of the bag
      */
     @Override
     public String toString() {
