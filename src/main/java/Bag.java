@@ -5,7 +5,7 @@
  * 1. Introduction to Java helpful.
  */
 
-public abstract class Bag {
+public abstract class Bag{
     /*
      * TODO: Create the following private instance variables
      *       - a String named color
@@ -27,11 +27,11 @@ public abstract class Bag {
      * be empty (e.g. numberOfContents is 0 and an empty String array for
      * its contents.)
      */
-    public Bag (String color, int capacity){
+    public Bag(String color, int capacity){
         this.color = color;
         this.numberOfContents = 0;
         this.capacity = capacity;
-        this.contents = new String[capacity];
+        this.contents = new String[0];
 
     }
 
@@ -74,8 +74,9 @@ public abstract class Bag {
      */
     public boolean addItem(String item){
         if (numberOfContents < capacity){
-            contents[contents.length - 1] = item;
-            numberOfContents = numberOfContents + 1;
+            this.contents = new String[this.numberOfContents + 1];
+            this.contents[this.numberOfContents] = item;
+            this.numberOfContents = this.numberOfContents + 1;
             return true;
         }
         return false;
@@ -96,12 +97,12 @@ public abstract class Bag {
      * @return item
      */
     public String popItem(){
-        if (contents.length == 0){
+        if (this.contents.length == 0){
             return null;
         }
         String item = contents[contents.length - 1];
-        numberOfContents = numberOfContents - 1;
-        contents[contents.length - 1] = "";
+        this.numberOfContents = this.numberOfContents - 1;
+        this.contents[this.numberOfContents - 1] = null;
         return item;
     }
 
