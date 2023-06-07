@@ -7,13 +7,22 @@
 
 public abstract class Bag {
     /*
+     * TODO: Create the following private instance variables
+     *       - a String named color
+     *       - an int named numberOfContents
+     *       - an int named capacity
+     *       - an array of Strings named contents
      */
     private String color;
     private int numberOfContents;
     private int capacity;
     private String[] contents;
 
+
     /*
+     * TODO: Create a constructor that takes two arguments:
+     *       - a String representing the Bag's colour
+     *       - an int representing the Bag's capacity
      *
      * The other attributes (private instance variables) should
      * be empty (e.g. numberOfContents is 0 and an empty String array for
@@ -26,6 +35,13 @@ public abstract class Bag {
         this.contents = new String[0];
     }
 
+    /*
+     * TODO: Create a variety of 'getter' functions.
+     *       These should be named:
+     *           - getColor
+     *           - getNumberOfContents
+     *           - getCapacity
+     */
     public String getColor(){
         return this.color;
     }
@@ -38,14 +54,14 @@ public abstract class Bag {
     }
 
 
-
-    /**
-     * A setter function called setColor which sets the
-     * color of this bag to the given color.
+    /*
+     * TODO: Create a setter function called setColor which sets the
+     *       color of this bag to the given color.
      */
     public void setColor(String color) {
         this.color = color;
     }
+
 
     /**
      * This method takes in a String representing an item in the Bag.
@@ -63,6 +79,7 @@ public abstract class Bag {
         }
         return false;
     }
+
 
     /**
      * Returns a String. The string is the last item added to this Bag
@@ -85,7 +102,7 @@ public abstract class Bag {
     /**
      * Increase this bag's capacity by n.
      *
-     * @param n the amount to increase this Bag's capacity by.
+     * @param n the amount to increase this Bag's capacity by
      */
     public void increaseCapacity(int n) {
         this.capacity = this.capacity + n;
