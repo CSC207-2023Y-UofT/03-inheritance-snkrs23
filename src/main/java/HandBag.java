@@ -10,10 +10,6 @@ public class HandBag extends Bag{
     public HandBag(String color, int capacity) {
         super(color, capacity);
     }
-
-    /**
-     * Increase the capacity of this bag by 1.
-     */
     @Override
     public void enhance() {
         super.increaseCapacity(1);
