@@ -18,6 +18,7 @@ public abstract class Bag {
     private int capacity;
     private String[] contents;
 
+
     /*
      * TODO: Create a constructor that takes two arguments:
      *       - a String representing the Bag's colour
@@ -31,9 +32,10 @@ public abstract class Bag {
         this.color = color;
         this.numberOfContents = 0;
         this.capacity = capacity;
-        this.contents = new String[]{};
+        this.contents = new String[0];
 
     }
+
 
 
     /*
@@ -54,23 +56,23 @@ public abstract class Bag {
         return this.capacity;
     }
 
-    /*
-     * TODO: Create a setter function called setColor which sets the
-     *       color of this bag to the given color.
-     */
 
+
+    /**
+     * A setter function called setColor which sets the
+     * color of this bag to the given color.
+     */
     public void setColor(String color) {
         this.color = color;
     }
-    /*
-     * TODO: Create a method called addItem that takes in a String
-     *       representing an item in the Bag.
-     *       The item is added into the Bag if the number of items
-     *       in the bag is < the capacity of the Bag.
-     *       Remember to modify numberOfContents accordingly.
-     *
-     *       This method should return true if the item was added
-     *       and false otherwise.
+
+    /**
+     * This method takes in a String representing an item in the Bag.
+     * The item is added into the Bag if the number of items
+     * in the bag is < the capacity of the Bag.
+     * This method should return true if the item was added
+     * and false otherwise.
+     * @return bool statement dependent on item.
      */
     public boolean addItem(String item){
         if (this.numberOfContents < this.capacity){
@@ -82,15 +84,14 @@ public abstract class Bag {
     }
 
 
+
+
+
     /**
-     * TODO: Create a method called popItem that returns a String.
-     *       The string should be the last item added to this Bag
-     *       and the item should be removed from this Bag.
-     *       Remember to modify numberOfContents accordingly.
-     *
+     * Returns a String. The string is the last item added to this Bag
+     * and the item is removed from this Bag.
      * If there are no items in this Bag, return null.
-     *
-     * @return item
+     * @return String item which is the last item added to the bag and will be removed.
      */
     public String popItem(String item){
         if (this.contents.length == 0){
@@ -103,13 +104,16 @@ public abstract class Bag {
     }
 
 
+
+
     /**
      * Increase this bag's capacity by n.
      *
-     * @param n the amount to increase this Bag's capacity by
+     * @param n the amount to increase this Bag's capacity by.
      */
     public void increaseCapacity(int n) {
         this.capacity = this.capacity + n;
+
     }
 
     /**
@@ -117,7 +121,7 @@ public abstract class Bag {
      * This method requires you to have created the private
      * instance variables mentioned above.
      *
-     * @return details of the bag
+     * @return A String description of the items in the bag.
      */
     @Override
     public String toString() {
