@@ -70,11 +70,11 @@ public abstract class Bag {
      * If there are no items in this Bag, return null.
      * @return String item which is the last item added to the bag and will be removed.
      */
-    public String popItem(String item){
+    public String popItem(){
         if (this.contents.length == 0){
             return null;
         } else {
-            item = this.contents[numberOfContents - 1];
+            String item = this.contents[numberOfContents - 1];
             this.contents[this.numberOfContents - 1] = null;
             this.numberOfContents = this.numberOfContents - 1;
             return item;
