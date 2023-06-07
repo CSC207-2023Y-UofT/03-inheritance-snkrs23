@@ -5,7 +5,7 @@
  * 1. Introduction to Java helpful.
  */
 
-public abstract class Bag{
+public abstract class Bag {
     /*
      * TODO: Create the following private instance variables
      *       - a String named color
@@ -31,7 +31,7 @@ public abstract class Bag{
         this.color = color;
         this.numberOfContents = 0;
         this.capacity = capacity;
-        this.contents = new String[0];
+        this.contents = new String[]{};
 
     }
 
@@ -44,14 +44,14 @@ public abstract class Bag{
      *           - getCapacity
      */
     public String getColor(){
-        return color;
+        return this.color;
     }
     public int getNumberOfContents(){
-        return numberOfContents;
+        return this.numberOfContents;
     }
 
     public int getCapacity() {
-        return capacity;
+        return this.capacity;
     }
 
     /*
@@ -73,17 +73,13 @@ public abstract class Bag{
      *       and false otherwise.
      */
     public boolean addItem(String item){
-        if (numberOfContents < capacity){
-            this.contents = new String[this.numberOfContents + 1];
-            this.contents[this.numberOfContents] = item;
+        if (this.numberOfContents < this.capacity){
+            this.contents[numberOfContents] = item;
             this.numberOfContents = this.numberOfContents + 1;
             return true;
         }
         return false;
     }
-
-
-
 
 
     /**
@@ -96,13 +92,13 @@ public abstract class Bag{
      *
      * @return item
      */
-    public String popItem(){
+    public String popItem(String item){
         if (this.contents.length == 0){
             return null;
         }
-        String item = contents[contents.length - 1];
-        this.numberOfContents = this.numberOfContents - 1;
+        item = this.contents[numberOfContents - 1];
         this.contents[this.numberOfContents - 1] = null;
+        this.numberOfContents = this.numberOfContents - 1;
         return item;
     }
 
@@ -113,7 +109,7 @@ public abstract class Bag{
      * @param n the amount to increase this Bag's capacity by
      */
     public void increaseCapacity(int n) {
-        capacity = capacity + n;
+        this.capacity = this.capacity + n;
     }
 
     /**
