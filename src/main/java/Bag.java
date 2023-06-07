@@ -85,7 +85,7 @@ public abstract class Bag {
      * Returns a String. The string is the last item added to this Bag
      * and the item is removed from this Bag.
      * If there are no items in this Bag, return null.
-     * @return String item which is the last item added to the bag and will be removed.
+     * @return String item which is the last item added to the bag and is removed.
      */
     public String popItem(){
         if (this.contents.length == 0){
