@@ -7,22 +7,13 @@
 
 public abstract class Bag {
     /*
-     * TODO: Create the following private instance variables
-     *       - a String named color
-     *       - an int named numberOfContents
-     *       - an int named capacity
-     *       - an array of Strings named contents
      */
     private String color;
     private int numberOfContents;
     private int capacity;
     private String[] contents;
 
-
     /*
-     * TODO: Create a constructor that takes two arguments:
-     *       - a String representing the Bag's colour
-     *       - an int representing the Bag's capacity
      *
      * The other attributes (private instance variables) should
      * be empty (e.g. numberOfContents is 0 and an empty String array for
@@ -30,21 +21,11 @@ public abstract class Bag {
      */
     public Bag(String color, int capacity){
         this.color = color;
-        this.numberOfContents = 0;
         this.capacity = capacity;
+        this.numberOfContents = 0;
         this.contents = new String[0];
-
     }
 
-
-
-    /*
-     * TODO: Create a variety of 'getter' functions.
-     *       These should be named:
-     *           - getColor
-     *           - getNumberOfContents
-     *           - getCapacity
-     */
     public String getColor(){
         return this.color;
     }
@@ -83,10 +64,6 @@ public abstract class Bag {
         return false;
     }
 
-
-
-
-
     /**
      * Returns a String. The string is the last item added to this Bag
      * and the item is removed from this Bag.
@@ -102,8 +79,6 @@ public abstract class Bag {
         this.numberOfContents = this.numberOfContents - 1;
         return item;
     }
-
-
 
 
     /**
