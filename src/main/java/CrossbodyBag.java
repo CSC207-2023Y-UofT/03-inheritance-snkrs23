@@ -32,13 +32,13 @@
  *
  */
     public class CrossbodyBag extends Bag {
-        private int numberOfStraps;
+        int numberOfStraps;
 
-        public CrossbodyBag(String color, int capacity, int numberOfStraps){
+        public CrossbodyBag(String color, int capacity, int Straps){
             super(color, capacity);
-            this.numberOfStraps = numberOfStraps;
+            this.numberOfStraps = Straps;
         }
-        public int getNumberOfstraps(){
+        public int getNumberOfStraps(){
             return this.numberOfStraps;
         }
 
@@ -48,7 +48,7 @@
         }
         @Override
         public String toString() {
-            return this.getColor() + " Crossbody Bag (" + this.numberOfStraps + " straps " + this.getNumberOfContents() +
-                this.getCapacity() + ")";
+            return this.getColor() + " Crossbody Bag (" + this.numberOfStraps + " straps " + super.getNumberOfContents() +
+                super.getCapacity() + ")";
         }
 }
