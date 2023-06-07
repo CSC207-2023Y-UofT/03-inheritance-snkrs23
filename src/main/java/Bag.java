@@ -1,10 +1,3 @@
-/*
- * This file defines an abstract class named Bag.
- * In this exercise, you will be writing a larger class according to
- * the TODOs we have left you. You may find the readings in chapter
- * 1. Introduction to Java helpful.
- */
-
 public abstract class Bag {
     /*
      */
