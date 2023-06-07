@@ -114,7 +114,7 @@ public abstract class Bag {
      * This method requires you to have created the private
      * instance variables mentioned above.
      *
-     * @return A String description of the items in the bag.
+     * @return A String description of the items in this bag.
      */
     @Override
     public String toString() {
