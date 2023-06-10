@@ -1,5 +1,5 @@
 /* This file contains a few exercises and TODOs for you to fill.
- * Make sure you do the TODOs in Bag.java, HandBag.java and CrossbodyBag.java
+ * Make sure you do the TODOs in Bag.java, HandBag.java and CrossbodyBag.java 
  * as the tasks in this file depends on the completion on those!
  *
  * You may find the readings in chapter 3. Relationships between Classes
